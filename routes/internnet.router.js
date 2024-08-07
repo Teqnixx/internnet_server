@@ -5,6 +5,6 @@ const internnetController = require('../controller/internnet.controller.js')
 
 router.get("/users", internnetController.getAll)
 router.get("/users/:username", internnetController.getOne)
-router.get("/announcements/post", internnetController.postAnnouncement)
+router.post("/announcements/post", internnetController.postAnnouncement)
 
 module.exports = router
