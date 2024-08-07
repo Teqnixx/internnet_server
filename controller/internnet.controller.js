@@ -27,7 +27,7 @@ const internnetController = {
         const { title, description, id } = req.body
 
         try {
-            const { rows } = await postgre.query(`INSERT INTO announcements (title, description, date_posted, time_posted, user_id) VALUES
+            const { rows } = await postgre.query(`INSERT INTO announcement(title, description, date_posted, time_posted, user_id) VALUES
                 ('${title}', '${description}', CURRENT_DATE, CURRENT_TIME, '${id}')`)
             console.log(res)
             // res.json({msg: "OK", data: rows})
